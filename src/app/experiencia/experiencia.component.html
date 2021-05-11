@@ -1,0 +1,49 @@
+<div ngModelGroup="{{modelGroupName}}">
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Empresa</mat-label>
+          <input matInput name="conpany" ngModel i18n-placeholder required>
+      </mat-form-field>
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Cargo</mat-label>
+          <input matInput name="occupation" ngModel i18n-placeholder required>
+      </mat-form-field>
+  </div>
+<div>
+  <mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Início das atividades</mat-label>
+    <input matInput [matDatepicker]="datepicker"name="entryDate"  ngModel i18n-placeholder required>
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker>
+    </mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Fim das atividades</mat-label>
+    <input matInput [matDatepicker]="picker"name="exitDate"  ngModel i18n-placeholder required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #picker></mat-datepicker>
+  </mat-form-field>
+
+
+</div>
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+  <mat-form-field fxFlex="45">
+    <mat-label i18n>Nível</mat-label>
+      <input matInput name="level" ngModel i18n-placeholder required>
+  </mat-form-field>
+  <mat-form-field fxFlex="45">
+    <mat-label i18n>Área</mat-label>
+      <input matInput name="area" ngModel i18n-placeholder required>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label i18n>Atividades principais</mat-label>
+    <textarea matInput name="shortDescription" #message maxlength="500" ngModel i18n-placeholder required ></textarea>
+    <mat-hint align="start"></mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 500</mat-hint>
+  </mat-form-field>
+
+</div>
+</div>

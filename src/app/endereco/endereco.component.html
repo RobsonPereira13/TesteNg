@@ -1,0 +1,70 @@
+<div ngModelGroup="{{modelGroupName}}">
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+      <mat-form-field fxFlex="100">
+        <mat-label i18n>Rua</mat-label>
+          <input matInput  name="address" ngModel i18n-placeholder required>
+      </mat-form-field>
+      <mat-form-field fxFlex="20">
+        <mat-label i18n>Cep</mat-label>
+          <input matInput mask="00000-000" name="cep" ngModel i18n-placeholder required>
+      </mat-form-field>
+
+  </div>
+  <div>
+    <mat-form-field fxFlex="100">
+      <mat-label i18n>Bairro</mat-label>
+        <input matInput  name="neighborhood" ngModel i18n-placeholder required>
+    </mat-form-field>
+    <mat-form-field fxFlex="100">
+      <mat-label i18n>Número</mat-label>
+        <input matInput mask="000 || 0000 || 00" name="adressNumber" ngModel i18n-placeholder required>
+    </mat-form-field>
+    <mat-form-field fxFlex="100">
+      <mat-label i18n>Complemento</mat-label>
+        <input matInput  name="complement">
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Cidade</mat-label>
+          <input matInput name="city" ngModel i18n-placeholder required>
+      </mat-form-field>
+      <mat-form-field fxFlex="20">
+        <mat-label i18n>Estado</mat-label>
+            <mat-select name="country" required ngModel>
+                <mat-option value="AC" i18n>Acre</mat-option>
+                <mat-option value="AL" i18n>Alagoas</mat-option>
+                <mat-option value="AP" i18n>Amapá</mat-option>
+                <mat-option value="AM" i18n>Amazonas</mat-option>
+                <mat-option value="BA" i18n>Bahia</mat-option>
+                <mat-option value="CE" i18n>Ceará</mat-option>
+                <mat-option value="ES" i18n>Espírito Santo</mat-option>
+                <mat-option value="GO" i18n>Goiás</mat-option>
+                <mat-option value="MA" i18n>Maranhão</mat-option>
+                <mat-option value="MT" i18n>Mato Grosso</mat-option>
+                <mat-option value="MS" i18n>Mato Grosso do Sul</mat-option>
+                <mat-option value="MG" i18n>Minas Gerais</mat-option>
+                <mat-option value="PA" i18n>Pará</mat-option>
+                <mat-option value="PB" i18n>Paraíba</mat-option>
+                <mat-option value="PR" i18n>Paraná</mat-option>
+                <mat-option value="PE" i18n>Pernambuco</mat-option>
+                <mat-option value="PI" i18n>Piauí</mat-option>
+                <mat-option value="RJ" i18n>Rio de Janeiro</mat-option>
+                <mat-option value="RN" i18n>Rio Grande do Norte</mat-option>
+                <mat-option value="RS" i18n>Rio Grande do Sul</mat-option>
+                <mat-option value="RO" i18n>Rondônia</mat-option>
+                <mat-option value="RR" i18n>Roraima</mat-option>
+                <mat-option value="SC" i18n>Santa Catarina</mat-option>
+                <mat-option value="SP" i18n>São Paulo</mat-option>
+                <mat-option value="SE" i18n>Sergipe</mat-option>
+                <mat-option value="TO" i18n>Tocantins</mat-option>
+                <mat-option value="DF" i18n>Distrito Federal</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+  </div>
+
+</div>
+

@@ -1,0 +1,51 @@
+<div ngModelGroup="{{modelGroupName}}">
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Instituição</mat-label>
+          <input matInput name="institution" ngModel i18n-placeholder >
+      </mat-form-field>
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Curso</mat-label>
+          <input matInput name="academicFormation" ngModel i18n-placeholder required>
+      </mat-form-field>
+  </div>
+<div>
+
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+  <mat-form-field fxFlex="45">
+    <mat-label i18n>Nível</mat-label>
+      <input matInput name="formationLevel" ngModel i18n-placeholder required>
+  </mat-form-field>
+  <mat-form-field fxFlex="45">
+    <mat-label i18n>País</mat-label>
+      <input matInput name="area"ngModel i18n-placeholder >
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field fxFlex="45">
+    <mat-label i18n>Estado</mat-label>
+      <input matInput name="status"ngModel i18n-placeholder >
+  </mat-form-field>
+<mat-form-field fxFlex="20">
+  <mat-label i18n>Conclusão/Previsão</mat-label>
+    <input matInput [matDatepicker]="picker"name="conclusion" ngModel i18n-placeholder >
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #picker></mat-datepicker>
+</mat-form-field>
+</div>
+<div>
+  <mat-form-field fxFlex="45">
+    <mat-label i18n>Idioma</mat-label>
+      <input matInput name="language"ngModel i18n-placeholder >
+  </mat-form-field>
+  <mat-form-field fxFlex="20">
+    <mat-label i18n>Nível</mat-label>
+        <mat-select name="languageLevel" required ngModel>
+            <mat-option value="basic" i18n>Básico</mat-option>
+            <mat-option value="intermediary" i18n>Intermediário</mat-option>
+            <mat-option value="advanced" i18n>Avançado</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+</div>

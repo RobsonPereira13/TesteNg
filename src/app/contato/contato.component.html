@@ -1,0 +1,72 @@
+<div ngModelGroup="{{modelGroupName}}">
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Nome</mat-label>
+          <input   matInput  name="name" ngModel i18n-placeholder required>
+      </mat-form-field>
+      <mat-form-field fxFlex="45">
+        <mat-label i18n>Nacionalidade</mat-label>
+          <input matInput name="nationality" >
+      </mat-form-field>
+  </div>
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+
+    <mat-form-field fxFlex="20">
+        <mat-label i18n>Gênero</mat-label>
+            <mat-select name="genre"  ngModel>
+                <mat-option value="Female" i18n>Feminino</mat-option>
+                <mat-option value="Male" i18n>Masculino</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <mat-form-field fxFlex="20">
+      <mat-label i18n>Nascimento</mat-label>
+        <input matInput [matDatepicker]="picker"name="birthday"  ngModel i18n-placeholder required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi="true" #picker></mat-datepicker>
+    </mat-form-field>
+</div>
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+  <mat-form-field fxFlex="50">
+    <mat-label i18n>Cpf</mat-label>
+      <input matInput mask="000.000.000-00" name="cpf" ngModel i18n-placeholder required>
+  </mat-form-field>
+  <mat-form-field fxFlex="20">
+    <mat-label i18n>Estado civil</mat-label>
+        <mat-select name="marital"  ngModel>
+            <mat-option value="not married" i18n>Solteiro</mat-option>
+            <mat-option value="married" i18n>Casado</mat-option>
+            <mat-option value="divorced" i18n>Divorciado</mat-option>
+            <mat-option value="widower" i18n>Viúvo</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+</div>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+    <mat-form-field >
+      <mat-label>E-mail</mat-label>
+      <input matInput   placeholder="pat@example.com"  [formControl]="email" name="email" ngModel i18n-placeholder required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex="10">
+      <mat-label i18n>Telefone</mat-label>
+        <input matInput mask="(00)00000-0000"  name="phone" ngModel i18n-placeholder required>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+    <mat-form-field fxFlex="45">
+      <mat-label i18n>Área de interesse</mat-label>
+        <input matInput name="interestArea" ngModel i18n-placeholder required>
+    </mat-form-field>
+    <mat-form-field fxFlex="45">
+      <mat-label i18n>Pretensão salarial</mat-label>
+        <input matInput suffix=" $" mask="0000" name="wage" ngModel i18n-placeholder required>
+    </mat-form-field>
+</div>
+
+  <app-endereco modelGroupName="contato"></app-endereco>
+
+</div>
